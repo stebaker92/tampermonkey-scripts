@@ -1,4 +1,4 @@
-# tampermonkey-scripts
+# Tampermonkey User Scripts
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-resentment.svg)](https://forthebadge.com)
