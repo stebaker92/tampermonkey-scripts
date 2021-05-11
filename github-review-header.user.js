@@ -1,9 +1,10 @@
 // ==UserScript==
-// @name         GitHub - Review Requests header link
+// @name         GitHub Review Requests header link
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
-// @description  
+// @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/github-review-header.user.js
+// @description  Add Review Requests to GitHub navbar
 // @author       stebaker92
 // @match        https://github.com/*
 // @icon         https://github.com/favicon.ico
