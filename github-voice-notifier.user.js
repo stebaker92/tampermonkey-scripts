@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub - Voice notifier when PR is ready to merge
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.2.1
 // @description  Says a thing when you can merge
 // @author       stebaker92
 // @match        https://github.com/*/*/pull/*
@@ -56,7 +56,7 @@ function startTimer(){
     return setInterval(() => {
         if (prIsOutdated() && !wasPrOutdatedOnLoad) {
             clearInterval(timer)
-            notify("Your P R is outdated, you need to merge in master");
+            notify("Your P R is outdated");
         }
 
         if (checkCanMerge()) {
@@ -88,7 +88,7 @@ function notify(text){
     // https://dev.to/asaoluelijah/text-to-speech-in-3-lines-of-javascript-b8h
     var msg = new SpeechSynthesisUtterance();
     msg.text = text;
-    msg.volume=0.5;
+    msg.volume = 0.5;
     window.speechSynthesis.speak(msg);
 
     // This should bring attention to the tab, just incase you don't hear the voice (i.e. low volume, AFK)
