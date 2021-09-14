@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub - Hide test files in PRs
-// @namespace    http://tampermonkey.net/
-// @version      0.1
+// @namespace    https://github.com/stebaker92
+// @version      0.1.2
 // @description  Collapses all test related files in PRs
 // @author       stebaker92
 // @match        https://github.com/*/*/pull/*
@@ -14,6 +14,7 @@ const testPatterns= [
     // JS
     '_test',
     'spec.js',
+    'test/',
     'fixture',
 ];
 
