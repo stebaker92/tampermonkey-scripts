@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub - Hide test files in PRs
 // @namespace    https://github.com/stebaker92
-// @version      0.1.2
+// @version      0.1.4
 // @description  Collapses all test related files in PRs
 // @author       stebaker92
 // @match        https://github.com/*/*/pull/*
@@ -15,6 +15,7 @@ const testPatterns= [
     '_test',
     'spec.js',
     'test/',
+    'test-utils/',
     'fixture',
 ];
 
@@ -32,8 +33,10 @@ function toggleTestFiles () {
     const files = document.querySelectorAll('.file');
     console.log('got files',files)
 
-    files.forEach(file =>{
-        const path = file.querySelector('.file-header').attributes['data-path'].textContent;
+    files.forEach(file => {
+        const path = file.querySelector('.file-header')?.attributes['data-path']?.textContent;
+
+        if (!path) return;
 
         console.log('checking file',path)
 
