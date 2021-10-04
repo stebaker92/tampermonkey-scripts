@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - "master"
-      - "readme-updater"
+      - "readme-generate"
 
 jobs:
   readme-updater:
@@ -18,8 +18,8 @@ jobs:
 
     - uses: actions/setup-node@v2
     
-    - run: node readme-generator.js
+    - run: node readme-updater.js
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: Generate readme
+        commit_message: Update readme
