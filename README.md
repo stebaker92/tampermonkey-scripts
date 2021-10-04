@@ -7,9 +7,9 @@
 [![Install](https://img.shields.io/badge/v0.1.4-install-success)](github-pr-hide-files.user.js?raw=1)
 Collapses all test related files in PRs
 
-## GitHub Review Requests header link
+## GitHub - Review Requests header link
 [![Install](https://img.shields.io/badge/v0.1.1-install-success)](github-review-header.user.js?raw=1)
-Adds Review Requests link to GitHub navbar
+Adds 'Review Requests' link to GitHubs navbar
 
 ## GitHub - Voice notifier when PR is ready to merge
 [![Install](https://img.shields.io/badge/v0.2.1-install-success)](github-voice-notifier.user.js?raw=1)
