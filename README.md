@@ -18,6 +18,6 @@ Adds 'Review Requests' link to GitHubs navbar
 Says a thing when you can merge
 
 ## Twitch reward redeemer
-[![Install](https://img.shields.io/badge/v0.1-install-success)](twitch-redeem-auto-collector.user.js?raw=1)
+[![Install](https://img.shields.io/badge/v0.2-install-success)](twitch-redeem-auto-collector.user.js?raw=1)
 Auto redeems channel rewards in Twitch
 
