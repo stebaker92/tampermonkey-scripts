@@ -21,3 +21,7 @@ Says a thing when you can merge
 [![Install](https://img.shields.io/badge/v0.2-install-success)](twitch-redeem-auto-collector.user.js?raw=1)
 Auto redeems channel rewards in Twitch
 
+## Ultimate Guitar - Link To Spotify
+[![Install](https://img.shields.io/badge/v0.1-install-success)](ultimateguitar-spotify-link.user.js?raw=1)
+Adds a link to Spotify
+
