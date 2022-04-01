@@ -26,6 +26,6 @@ Says a thing when you can merge
 Auto redeems channel rewards in Twitch
 
 ## Ultimate Guitar - Link To Spotify
-[![Install](https://img.shields.io/badge/v0.1-install-success)](ultimateguitar-spotify-link.user.js?raw=1)
+[![Install](https://img.shields.io/badge/v0.1.1-install-success)](ultimateguitar-spotify-link.user.js?raw=1)
 Adds a link to Spotify
 
