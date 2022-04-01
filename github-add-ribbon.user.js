@@ -4,6 +4,7 @@
 // @version      0.1.1
 // @description  Add repo links for github pages apps
 // @author       stebaker92
+// @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/github-add-ribbon.user.js
 // @match        https://*.github.io/*
 // @match        https://*.gitlab.io/*
 // @match        https://*.netlify.app/*
