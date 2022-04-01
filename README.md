@@ -5,6 +5,10 @@ Just some basic TamperMonkey scripts I've created to learn TamperMonkey
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 
+## GitHub - Adds banner for github pages apps
+[![Install](https://img.shields.io/badge/v0.1.1-install-success)](github-add-ribbon.user.js?raw=1)
+Add repo links for github pages apps
+
 ## GitHub - Hide test files in PRs
 [![Install](https://img.shields.io/badge/v0.1.4-install-success)](github-pr-hide-files.user.js?raw=1)
 Collapses all test related files in PRs
