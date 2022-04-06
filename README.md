@@ -25,7 +25,7 @@ Says a thing when you can merge
 [![Install](https://img.shields.io/badge/v1-install-success)](trello-card-numbers.user.js?raw=1)
 Show trello card numbers
 
-## Twitch reward redeemer
+## Twitch - reward redeemer
 [![Install](https://img.shields.io/badge/v0.2-install-success)](twitch-redeem-auto-collector.user.js?raw=1)
 Auto redeems channel rewards in Twitch
 
