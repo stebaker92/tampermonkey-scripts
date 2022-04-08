@@ -5,6 +5,10 @@ Just some basic TamperMonkey scripts I've created to learn TamperMonkey
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 
+## Azure DevOps - Add Jira Link
+[![Install](https://img.shields.io/badge/v0.2-install-success)](azure-add-jira-link.user.js?raw=1)
+try to take over the world!
+
 ## GitHub - Adds banner for github pages apps
 [![Install](https://img.shields.io/badge/v0.1.1-install-success)](github-add-ribbon.user.js?raw=1)
 Add repo links for github pages apps
