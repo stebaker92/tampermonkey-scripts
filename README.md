@@ -13,6 +13,10 @@ try to take over the world!
 [![Install](https://img.shields.io/badge/v0.1.1-install-success)](github-add-ribbon.user.js?raw=1)
 Add repo links for github pages apps
 
+## GitHub - Add link to gitpod
+[![Install](https://img.shields.io/badge/v0.1-install-success)](github-gitpod-link.user.js?raw=1)
+Adds a link to GitPod on all repos
+
 ## GitHub - Hide test files in PRs
 [![Install](https://img.shields.io/badge/v0.1.4-install-success)](github-pr-hide-files.user.js?raw=1)
 Collapses all test related files in PRs
