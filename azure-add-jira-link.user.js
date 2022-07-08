@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Azure DevOps - Add Jira Link
 // @namespace    http://tampermonkey.net/
-// @version      0.2
-// @description  try to take over the world!
+// @version      0.2.1
+// @description  Add link to JIRA
 // @author       stebaker92
 // @match        https://*.visualstudio.com/*/_git/*/pullrequest/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=visualstudio.com
@@ -13,8 +13,8 @@
 (function() {
     'use strict';
 
-    const JIRA_URL = GM_getValue("jira_url") || prompt("What is your JIRA URL?", "https://EXAMPLE.atlassian.net/browse/");
-    GM_setValue("jira_url", JIRA_URL);
+    const JIRA_URL = GM_getValue("jira_url") || prompt("What is your JIRA base URL?", "https://EXAMPLE.atlassian.net/browse/");
+    GM_setValue("jira_url", new URL(JIRA_URL).origin);
 
     if (!JIRA_URL) return;
 
@@ -25,7 +25,7 @@
     const newEl = document.createElement("a")
     newEl.innerText = "JIRA";
     newEl.classList = "bolt-split-button-main bolt-button enabled primary bolt-focus-treatment";
-    newEl.href= JIRA_URL + ticketParsed;
+    newEl.href= `${JIRA_URL}/browse/${ticketParsed}`;
 
     const header = document.querySelector(".repos-pr-title-row");
     header.insertAdjacentElement("afterend", newEl);
