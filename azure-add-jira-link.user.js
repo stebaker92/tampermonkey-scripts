@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Azure DevOps - Add Jira Link
 // @namespace    http://tampermonkey.net/
-// @version      0.2.1
+// @version      0.2.2
 // @description  Add link to JIRA
 // @author       stebaker92
 // @match        https://*.visualstudio.com/*/_git/*/pullrequest/*
+// @match        https://dev.azure.com/*/*/_git/*/pullrequest/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=visualstudio.com
 // @grant        GM_getValue
 // @grant        GM_setValue
@@ -19,7 +20,7 @@
     if (!JIRA_URL) return;
 
     const branch = document.querySelector(".pr-header-branches .bolt-link").innerText;
-    // TODO - regex this: ticketExample = "PXC-1371";
+    // TODO - regex this: ticketExample = "ABC-1371";
     const ticketParsed = branch.split("-").slice(0,2).join("-").replace("feature/", "")
 
     const newEl = document.createElement("a")
@@ -29,6 +30,4 @@
 
     const header = document.querySelector(".repos-pr-title-row");
     header.insertAdjacentElement("afterend", newEl);
-
-    // TODO - we could load the JIRA page and append the title onto the PR using GM_xmlHttpRequest
 })();
