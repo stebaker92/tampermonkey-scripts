@@ -6,7 +6,7 @@ Just some basic TamperMonkey scripts I've created to learn TamperMonkey
 
 
 ## Azure DevOps - Add Jira Link
-[![Install](https://img.shields.io/badge/v0.2.1-install-success)](azure-add-jira-link.user.js?raw=1)
+[![Install](https://img.shields.io/badge/v0.2.2-install-success)](azure-add-jira-link.user.js?raw=1)
 Add link to JIRA
 
 ## GitHub - Adds banner for github pages apps
