@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Ultimate Guitar - Link To Spotify
 // @namespace    https://github.com/stebaker92/tampermonkey-scripts/
-// @version      0.1.1
+// @version      0.1.2
 // @description  Adds a link to Spotify
 // @author       stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/blob/master/ultimateguitar-spotify-link.user.js
 // @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/ultimateguitar-spotify-link.user.js
 // @match        https://tabs.ultimate-guitar.com/tab/**
-// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=https://ultimate-guitar.com/
 // @grant        none
 // ==/UserScript==
 
