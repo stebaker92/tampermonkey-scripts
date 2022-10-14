@@ -1,14 +1,16 @@
 // ==UserScript==
 // @name         Azure DevOps - Add Jira Link
-// @namespace    http://tampermonkey.net/
-// @version      0.2.2
-// @description  Add link to JIRA
+// @namespace    https://github.com/stebaker92/
+// @version      0.3
+// @description  Add a link to JIRA tickets on PRs
 // @author       stebaker92
 // @match        https://*.visualstudio.com/*/_git/*/pullrequest/*
+// @match        https://*.visualstudio.com/**
 // @match        https://dev.azure.com/*/*/_git/*/pullrequest/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=visualstudio.com
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @require      https://cdn.jsdelivr.net/gh/CoeJoder/waitForKeyElements.js@v1.2/waitForKeyElements.js
 // ==/UserScript==
 
 (function() {
@@ -19,15 +21,30 @@
 
     if (!JIRA_URL) return;
 
-    const branch = document.querySelector(".pr-header-branches .bolt-link").innerText;
-    // TODO - regex this: ticketExample = "ABC-1371";
-    const ticketParsed = branch.split("-").slice(0,2).join("-").replace("feature/", "")
+    // DevOps uses client side routing so we need to wait until we're on a PR page to inject this button
+    waitForKeyElements(`.pr-header-branches .bolt-link`, () => addBtn());
 
-    const newEl = document.createElement("a")
-    newEl.innerText = "JIRA";
-    newEl.classList = "bolt-split-button-main bolt-button enabled primary bolt-focus-treatment";
-    newEl.href= `${JIRA_URL}/browse/${ticketParsed}`;
+    function addBtn(){
+        // Prevent duplicate buttons on tab change
+        if (document.querySelector(`.tm-custom-jira-btn`)) return;
 
-    const header = document.querySelector(".repos-pr-title-row");
-    header.insertAdjacentElement("afterend", newEl);
+        const branch = document.querySelector(".pr-header-branches .bolt-link").innerText;
+        const ticketParsed = branch.split("-").slice(0,2).join("-").replace("feature/", "")
+
+        const newEl = document.createElement("a")
+        newEl.innerText = "JIRA";
+        newEl.classList = "bolt-split-button-main bolt-button enabled primary bolt-focus-treatment tm-custom-jira-btn";
+        newEl.href= `${JIRA_URL}/browse/${ticketParsed}`;
+
+        // TODO - improve this logic using regex: ticketExample = "ABC-1371";
+        // Check the ticket follows the format `***-000`
+        if (! Number(ticketParsed.split('-')?.[1])) {
+            newEl.disabled = true;
+            newEl.classList += "disabled";
+            newEl.title = "Unable to parse JIRA ticket ID";
+        }
+
+        const header = document.querySelector(".repos-pr-title-row");
+        header.insertAdjacentElement("afterend", newEl);
+    }
 })();
