@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name        Trello - Card Numbers
+// @name        Trello - Show Card Numbers
 // @namespace   https://github.com/stebaker92/
 // @author      stebaker92
-// @description Show trello card numbers
+// @description Show unique identifiers on Trello cards
 // @match       https://trello.com/b/**
 // @version     1
 // @icon        https://www.google.com/s2/favicons?sz=64&domain=trello.com
