@@ -33,9 +33,9 @@ Says a thing when you can merge
 [![Install](https://img.shields.io/badge/v0.2.2-install-success)](jira-add-pr-link-on-paste.user.js?raw=1)
 Attach a Link when pasting a PR URL
 
-## Trello - Card Numbers
+## Trello - Show Card Numbers
 [![Install](https://img.shields.io/badge/v1-install-success)](trello-card-numbers.user.js?raw=1)
-Show trello card numbers
+Show unique identifiers on Trello cards
 
 ## Twitch - reward redeemer
 [![Install](https://img.shields.io/badge/v0.2-install-success)](twitch-redeem-auto-collector.user.js?raw=1)
