@@ -12,7 +12,7 @@
 // @require      https://cdn.jsdelivr.net/gh/CoeJoder/waitForKeyElements.js@v1.2/waitForKeyElements.js
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
     const JIRA_URL = GM_getValue("jira_url") || prompt("What is your JIRA base URL?", "https://EXAMPLE.atlassian.net/browse/");
@@ -23,21 +23,21 @@
     // DevOps uses client side routing so we need to wait until we're on a PR page to inject this button
     waitForKeyElements(`.pr-header-branches .bolt-link`, () => addBtn());
 
-    function addBtn(){
+    function addBtn() {
         // Prevent duplicate buttons on tab change
         if (document.querySelector(`.tm-custom-jira-btn`)) return;
 
         const branch = document.querySelector(".pr-header-branches .bolt-link").innerText;
-        const ticketParsed = branch.split("-").slice(0,2).join("-").replace("feature/", "")
+        const ticketParsed = branch.split("-").slice(0, 2).join("-").replace("feature/", "")
 
         const newEl = document.createElement("a")
         newEl.innerText = "JIRA";
         newEl.classList = "bolt-split-button-main bolt-button enabled primary bolt-focus-treatment tm-custom-jira-btn";
-        newEl.href= `${JIRA_URL}/browse/${ticketParsed}`;
+        newEl.href = `${JIRA_URL}/browse/${ticketParsed}`;
 
         // TODO - improve this logic using regex: ticketExample = "ABC-1371";
         // Check the ticket follows the format `***-000`
-        if (! Number(ticketParsed.split('-')?.[1])) {
+        if (!Number(ticketParsed.split('-')?.[1])) {
             newEl.disabled = true;
             newEl.classList += "disabled";
             newEl.title = "Unable to parse JIRA ticket ID";

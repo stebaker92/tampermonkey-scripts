@@ -4,7 +4,6 @@
 // @version      0.1.1
 // @description  Add repo links for github pages apps
 // @author       stebaker92
-// @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/github-add-ribbon.user.js
 // @match        https://*.github.io/*
 // @match        https://*.gitlab.io/*
 // @match        https://*.netlify.app/*
@@ -12,13 +11,12 @@
 // @grant        GM_addStyle
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
     // This needs improvement but works for most github/gitlab hosted web apps
     const repo = location.pathname.split("/")[1];
     const [subdomain, service] = location.host.split(".")
-    const serviceFriendly = service;
 
     // Ribbon SVG & css source:
     // https://codepo8.github.io/css-fork-on-github-ribbon/

@@ -5,16 +5,15 @@
 // @description  Adds a link to Spotify
 // @author       stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/blob/master/ultimateguitar-spotify-link.user.js
-// @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/ultimateguitar-spotify-link.user.js
 // @match        https://tabs.ultimate-guitar.com/tab/**
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=https://ultimate-guitar.com/
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
-    const title = document.querySelector(`header h1`).parentNode.textContent.replace(" tab", "").trim().split(" by ").map(x=>x.trim())
+    const title = document.querySelector(`header h1`).parentNode.textContent.replace(" tab", "").trim().split(" by ").map(x => x.trim())
 
     const query = title.join(" - ")
 

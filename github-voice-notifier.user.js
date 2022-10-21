@@ -6,7 +6,6 @@
 // @author       stebaker92
 // @match        https://github.com/*/*/pull/*
 // @icon         https://github.githubassets.com/pinned-octocat.svg
-// @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/github-voice-notifier.user.js
 // @grant        none
 // ==/UserScript==
 
