@@ -6,12 +6,12 @@ Just some basic TamperMonkey scripts I've created to learn TamperMonkey
 
 
 ## Azure DevOps - Add Jira Link
-[![Install](https://img.shields.io/badge/v0.3-install-success)](azure-add-jira-link.user.js?raw=1)
+[![Install](https://img.shields.io/badge/v0.3.1-install-success)](azure-add-jira-link.user.js?raw=1)
 Add a link to JIRA tickets on PRs
 
-## GitHub - Adds banner for github pages apps
+## GitHub - Adds banner for github hosted web apps
 [![Install](https://img.shields.io/badge/v0.1.1-install-success)](github-add-ribbon.user.js?raw=1)
-Add repo links for github pages apps
+Add repo links onto github hosted apps
 
 ## GitHub - Add link to gitpod
 [![Install](https://img.shields.io/badge/v0.1-install-success)](github-gitpod-link.user.js?raw=1)
@@ -19,7 +19,7 @@ Adds a link to GitPod on all repos
 
 ## GitHub - Hide test files in PRs
 [![Install](https://img.shields.io/badge/v0.1.4-install-success)](github-pr-hide-files.user.js?raw=1)
-Collapses all test related files in PRs
+Auto collapse all test related files in PRs
 
 ## GitHub - Review Requests header link
 [![Install](https://img.shields.io/badge/v0.1.1-install-success)](github-review-header.user.js?raw=1)
