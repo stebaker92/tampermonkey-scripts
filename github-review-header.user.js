@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         GitHub - Review Requests header link
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/stebaker92/
 // @version      0.1.1
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/github-review-header.user.js
