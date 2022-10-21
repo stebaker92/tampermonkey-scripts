@@ -2,9 +2,9 @@
 // @name         GitHub - Add link to gitpod
 // @namespace    https://github.com/stebaker92/
 // @version      0.1
-// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @description  Adds a link to GitPod on all repos
 // @author       stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://github.com/*/*
 // @icon         https://github.com/favicon.ico
 // @require      https://cdn.jsdelivr.net/gh/CoeJoder/waitForKeyElements.js@v1.2/waitForKeyElements.js

@@ -1,9 +1,10 @@
 // ==UserScript==
-// @name         GitHub - Adds banner for github pages apps
+// @name         GitHub - Adds banner for github hosted web apps
 // @namespace    https://github.com/stebaker92/
 // @version      0.1.1
-// @description  Add repo links for github pages apps
+// @description  Add repo links onto github hosted apps
 // @author       stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://*.github.io/*
 // @match        https://*.gitlab.io/*
 // @match        https://*.netlify.app/*

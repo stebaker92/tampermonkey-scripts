@@ -4,6 +4,7 @@
 // @version      0.1.4
 // @description  Auto collapse all test related files in PRs
 // @author       stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://github.com/*/*/pull/*
 // @icon         https://github.githubassets.com/pinned-octocat.svg
 // @grant        none

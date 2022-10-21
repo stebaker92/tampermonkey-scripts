@@ -4,6 +4,7 @@
 // @version      0.2.1
 // @description  Says a thing when you can merge
 // @author       stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://github.com/*/*/pull/*
 // @icon         https://github.githubassets.com/pinned-octocat.svg
 // @grant        none

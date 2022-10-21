@@ -2,9 +2,9 @@
 // @name         GitHub - Review Requests header link
 // @namespace    https://github.com/stebaker92/
 // @version      0.1.1
-// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @description  Adds 'Review Requests' link to GitHubs navbar
 // @author       stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://github.com/*
 // @icon         https://github.com/favicon.ico
 // @grant        none
