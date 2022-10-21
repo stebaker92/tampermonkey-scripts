@@ -5,7 +5,8 @@ on:
   push:
     branches:
       - "master"
-      - "readme-generate"
+    paths:
+      - '**/*.user.js'
 
 jobs:
   readme-updater:
