@@ -3,7 +3,7 @@
 // @namespace    https://github.com/stebaker92/
 // @version      0.2.2
 // @description  Attach a Link when pasting a PR URL
-// @author       You
+// @author       stebaker92
 // @match        https://*.atlassian.net/browse/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=atlassian.net
 // @grant        none
