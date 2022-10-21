@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name         Azure DevOps - Add Jira Link
 // @namespace    https://github.com/stebaker92/
-// @version      0.3
+// @version      0.3.1
 // @description  Add a link to JIRA tickets on PRs
 // @author       stebaker92
-// @match        https://*.visualstudio.com/*/_git/*/pullrequest/*
 // @match        https://*.visualstudio.com/**
-// @match        https://dev.azure.com/*/*/_git/*/pullrequest/*
+// @match        https://dev.azure.com/**
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=visualstudio.com
 // @grant        GM_getValue
 // @grant        GM_setValue
