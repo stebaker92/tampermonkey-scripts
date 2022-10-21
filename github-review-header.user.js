@@ -1,20 +1,19 @@
 // ==UserScript==
 // @name         GitHub - Review Requests header link
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/stebaker92/
 // @version      0.1.1
-// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
-// @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/github-review-header.user.js
 // @description  Adds 'Review Requests' link to GitHubs navbar
 // @author       stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://github.com/*
 // @icon         https://github.com/favicon.ico
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
-    const href ='/pulls/review-requested';
+    const href = '/pulls/review-requested';
 
     const nav = document.getElementsByTagName('nav')[0];
 

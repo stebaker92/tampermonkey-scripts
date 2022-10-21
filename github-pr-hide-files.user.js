@@ -1,16 +1,16 @@
 // ==UserScript==
 // @name         GitHub - Hide test files in PRs
-// @namespace    https://github.com/stebaker92
+// @namespace    https://github.com/stebaker92/
 // @version      0.1.4
-// @description  Collapses all test related files in PRs
+// @description  Auto collapse all test related files in PRs
 // @author       stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://github.com/*/*/pull/*
 // @icon         https://github.githubassets.com/pinned-octocat.svg
-// @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/github-pr-hide-files.user.js
 // @grant        none
 // ==/UserScript==
 
-const testPatterns= [
+const testPatterns = [
     // JS
     '_test',
     'spec.js',
@@ -19,7 +19,7 @@ const testPatterns= [
     'fixture',
 ];
 
-(function() {
+(function () {
     'use strict';
 
     // Init
@@ -29,27 +29,27 @@ const testPatterns= [
     document.addEventListener('pjax:end', addButton)
 })();
 
-function toggleTestFiles () {
+function toggleTestFiles() {
     const files = document.querySelectorAll('.file');
-    console.log('got files',files)
+    console.log('got files', files)
 
     files.forEach(file => {
         const path = file.querySelector('.file-header')?.attributes['data-path']?.textContent;
 
         if (!path) return;
 
-        console.log('checking file',path)
+        console.log('checking file', path)
 
         let isTestFile = false
         testPatterns.forEach(pattern => {
-            if(path.includes(pattern)){
+            if (path.includes(pattern)) {
                 isTestFile = true
             }
         })
 
         console.log(`file is ${isTestFile}`)
 
-        if (isTestFile){
+        if (isTestFile) {
             const button = file.querySelector('.file-info button')
 
             if (button.attributes['aria-expanded'].textContent === 'true') {
@@ -59,9 +59,9 @@ function toggleTestFiles () {
     });
 }
 
-function addButton(){
+function addButton() {
     var e = document.querySelector('#files_bucket .pr-toolbar .diffbar > .pr-review-tools')
-    if(!e) return;
+    if (!e) return;
     var r = e.querySelector('.GithubTestHiderButton')
     if (r) {
         r.parentElement.removeChild(r)
@@ -80,4 +80,5 @@ function addButton(){
     g.classList.add('GithubTestHiderButton', 'diffbar-item')
     g.appendChild(a)
 
-    e.insertBefore(g, e.firstChild)}
+    e.insertBefore(g, e.firstChild)
+}

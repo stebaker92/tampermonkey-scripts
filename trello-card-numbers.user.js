@@ -3,7 +3,6 @@
 // @namespace   https://github.com/stebaker92/
 // @author      stebaker92
 // @description Show trello card numbers
-// @updateURL   https://github.com/stebaker92/tampermonkey-scripts/raw/master/trello-card-numbers.user.js
 // @match       https://trello.com/b/**
 // @version     1
 // @icon        https://www.google.com/s2/favicons?sz=64&domain=trello.com

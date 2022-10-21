@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         GitHub - Voice notifier when PR is ready to merge
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/stebaker92/
 // @version      0.2.1
 // @description  Says a thing when you can merge
 // @author       stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://github.com/*/*/pull/*
 // @icon         https://github.githubassets.com/pinned-octocat.svg
-// @updateURL    https://github.com/stebaker92/tampermonkey-scripts/raw/master/github-voice-notifier.user.js
 // @grant        none
 // ==/UserScript==
 
