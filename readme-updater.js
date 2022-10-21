@@ -7,7 +7,7 @@ let readmeMarkdown = fs.readFileSync('README.template.md').toString();
 
 let projectsMarkdown = '';
 
-const findField = (js, field) =>  js.find(line => line.includes(`@${field}`))?.replace(`// @${field}`,"").trim();
+const findField = (js, field) => js.find(line => line.includes(`@${field}`))?.replace(`// @${field}`, "").trim();
 
 userscripts.forEach(path => {
     const js = fs.readFileSync(path).toString().split("\n")

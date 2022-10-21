@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Ultimate Guitar - Link To Spotify
-// @namespace    https://github.com/stebaker92/tampermonkey-scripts/
+// @namespace    https://github.com/stebaker92/
 // @version      0.1.2
 // @description  Adds a link to Spotify
 // @author       stebaker92

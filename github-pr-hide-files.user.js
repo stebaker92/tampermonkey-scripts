@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         GitHub - Hide test files in PRs
-// @namespace    https://github.com/stebaker92
+// @namespace    https://github.com/stebaker92/
 // @version      0.1.4
 // @description  Auto collapse all test related files in PRs
 // @author       stebaker92
