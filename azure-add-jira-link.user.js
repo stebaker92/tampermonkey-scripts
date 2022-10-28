@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Azure DevOps - Add Jira Link
 // @namespace    https://github.com/stebaker92/
-// @version      0.3.1
+// @version      0.3.2
 // @description  Add a link to JIRA tickets on PRs
 // @author       stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
@@ -40,7 +40,7 @@
         // Check the ticket follows the format `***-000`
         if (!Number(ticketParsed.split('-')?.[1])) {
             newEl.disabled = true;
-            newEl.classList += "disabled";
+            newEl.classList += " disabled";
             newEl.title = "Unable to parse JIRA ticket ID";
         }
 
