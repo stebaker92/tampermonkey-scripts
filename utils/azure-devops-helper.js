@@ -40,4 +40,4 @@ azure = {
     getProject,
     getRepo,
     fetchBranches,
-}
+};
