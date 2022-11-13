@@ -36,8 +36,8 @@ Says a thing when you can merge
 Attach a Link when pasting a PR URL
 
 ## Spotify - Hide Podcast Recommendations
-[![Install](https://img.shields.io/badge/v0.2-install-success)](spotify-hide-podcast-recommendations.user.js?raw=1)
-Hide podcasts from homepage
+[![Install](https://img.shields.io/badge/v0.3-install-success)](spotify-hide-podcast-recommendations.user.js?raw=1)
+Hide podcast recommendations from homepage
 
 ## Trello - Show Card Numbers
 [![Install](https://img.shields.io/badge/v1-install-success)](trello-card-numbers.user.js?raw=1)
