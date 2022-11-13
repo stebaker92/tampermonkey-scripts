@@ -7,6 +7,10 @@ Issues & Pull requests are welcome!
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 
+## Spotify - Hide Podcast Recommendations
+[![Install](https://img.shields.io/badge/v0.2-install-success)](Spotify - Hide Podcast Recommendations.user.js?raw=1)
+Hide podcasts from homepage
+
 ## Azure DevOps - Add Jira Link
 [![Install](https://img.shields.io/badge/v0.3.2-install-success)](azure-add-jira-link.user.js?raw=1)
 Add a link to JIRA tickets on PRs
