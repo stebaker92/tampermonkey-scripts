@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         JIRA - Add PR Link on Paste
+// @namespace    https://github.com/stebaker92/tampermonkey-scripts/
 // @version      0.3
 // @description  Attach a Link when pasting a PR URL
 // @author       You
