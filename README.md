@@ -8,7 +8,7 @@ Issues & Pull requests are welcome!
 
 
 ## Azure DevOps - Add Jira Link
-[![Install](https://img.shields.io/badge/v0.3.2-install-success)](azure-add-jira-link.user.js?raw=1)
+[![Install](https://img.shields.io/badge/v0.4.1-install-success)](azure-add-jira-link.user.js?raw=1)
 Add a link to JIRA tickets on PRs
 
 ## GitHub - Adds banner for github hosted web apps
