@@ -11,9 +11,9 @@ Issues & Pull requests are welcome!
 [![Install](https://img.shields.io/badge/v0.4.1-install-success)](azure-add-jira-link.user.js?raw=1)
 Add a link to JIRA tickets on PRs
 
-## Azure DevOps - Hide Archived Repos
-[![Install](https://img.shields.io/badge/v0.1-install-success)](azure-hide-archived-repos.user.js?raw=1)
-Mute repositories with 'archived' in the name
+## Azure DevOps - Hide Archived Resources
+[![Install](https://img.shields.io/badge/v0.1.1-install-success)](azure-hide-archived-resources.user.js?raw=1)
+Mute resources repositories with 'archived' in the name
 
 ## GitHub - Adds banner for github hosted web apps
 [![Install](https://img.shields.io/badge/v0.1.1-install-success)](github-add-ribbon.user.js?raw=1)
