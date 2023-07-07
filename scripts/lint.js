@@ -11,22 +11,29 @@ var validations = {
     name: regexNotEmpty,
     description: regexNotEmpty,
     icon: regexNotEmpty,
-    namespace: "https://github.com/stebaker92/",
+    namespace: "https://github.com/stebaker92",
     homepage: "https://github.com/stebaker92/tampermonkey-scripts",
     author: "stebaker92",
-    version: /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/,
+    version: /^(\d+)(?:\.(\d+)(?:\.(\d+))?)?$/,
 }
 
 userscripts.forEach(path => {
     const js = fs.readFileSync(path).toString().split("\n")
 
-    console.info("Linting file", path)
+    var errors = [];
 
     for (const [key, regex] of Object.entries(validations)) {
         const jsValue = findField(js, key);
 
-        !new RegExp(regex).test(jsValue) && console.error(" - " + key + " failed validation with value " + jsValue)
+        if (!new RegExp(regex).test(jsValue)) {
+            errors.push(` - ${key} failed validation with value '${jsValue}'`)
+        }
     }
-    
-    console.log("")
+
+    if (errors.length) {
+        console.info("Warnings in file", path)
+        errors.forEach(e => console.log(e))
+        console.log("")
+    }
+
 })
