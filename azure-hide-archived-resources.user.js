@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Azure DevOps - Hide Archived Resources
-// @namespace    https://github.com/stebaker92/
+// @namespace    https://github.com/stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @version      0.1.1
 // @description  Mute resources repositories with 'archived' in the name
 // @author       stebaker92

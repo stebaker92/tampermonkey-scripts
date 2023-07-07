@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Azure DevOps - Add Jira Link
-// @namespace    https://github.com/stebaker92/
+// @namespace    https://github.com/stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @version      0.4.1
 // @description  Add a link to JIRA tickets on PRs
 // @author       stebaker92

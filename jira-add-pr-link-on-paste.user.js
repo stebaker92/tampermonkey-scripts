@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         JIRA - Add PR Link on Paste
-// @namespace    https://github.com/stebaker92/tampermonkey-scripts/
-// @version      0.3
+// @namespace    https://github.com/stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
+// @version      0.3.1
 // @description  Attach a Link when pasting a PR URL
-// @author       You
+// @author       stebaker92
 // @match        https://*.atlassian.net/browse/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=atlassian.net
 // @grant        none
@@ -23,20 +24,19 @@
 
         if (e.target.className.includes("ProseMirror-")) { console.log("ticket is being edited.. exiting"); return; }
         if (e.target.tagName.includes("INPUT")) { console.log("input is being edited.. exiting"); return; }
+        if (e.target?.isContentEditable) { console.log("isContentEditable is true.. exiting"); return; }
 
-        // This is a little hacky but JIRA doesn't load icons from dev.azure.com so use visualstudio.com
+        console.log("e.target.tagName",e.target.tagName)
+
+        // JIRA doesn't load icons from dev.azure.com so use visualstudio.com instead
         var org;
         const formatAzureUrl = text => text.includes("dev.azure.com") ? (org = text.split("/")[3], `${text.replace("dev.azure.com/" + org, org + ".visualstudio.com")}`) : text;
 
-        text=formatAzureUrl(text);
+        text = formatAzureUrl(text);
 
         e.preventDefault();
 
         const repoName = decodeURI(text.includes("dev.azure.com") ? text.split("/")[6] : text.split("/")[5]); // This only handles Azure & VisualStudio.com links currently
-
-        function wait(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
 
         document.querySelector(`[data-testid="issue.views.issue-base.foundation.quick-add.link-button.ui.link-dropdown-button"]`).click();
         await wait(50)
@@ -58,4 +58,8 @@ async function sendKeys(selector, text){
 
     window.document.execCommand('insertText', false, text);
     document.querySelector(selector).dispatchEvent(new Event('input', { bubbles: true } ));
+}
+
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
