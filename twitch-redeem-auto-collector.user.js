@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Twitch - reward redeemer
-// @namespace    https://github.com/stebaker92/
+// @namespace    https://github.com/stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @version      0.2
 // @description  Auto redeems channel rewards in Twitch
 // @author       stebaker92

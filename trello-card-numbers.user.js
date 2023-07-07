@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        Trello - Show Card Numbers
-// @namespace   https://github.com/stebaker92/
+// @namespace    https://github.com/stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @author      stebaker92
 // @description Show unique identifiers on Trello cards
 // @match       https://trello.com/b/**

@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Spotify - Hide Podcast Recommendations
-// @namespace    https://github.com/stebaker92/
+// @namespace    https://github.com/stebaker92
+// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @version      0.3.2
 // @description  Hide podcast recommendations from homepage
 // @author       stebaker92

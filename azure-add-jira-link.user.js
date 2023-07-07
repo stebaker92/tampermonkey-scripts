@@ -5,7 +5,6 @@
 // @version      0.4.1
 // @description  Add a link to JIRA tickets on PRs
 // @author       stebaker92
-// @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://*.visualstudio.com/**
 // @match        https://dev.azure.com/**
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=visualstudio.com
