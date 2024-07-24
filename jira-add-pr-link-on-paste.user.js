@@ -2,7 +2,7 @@
 // @name         JIRA - Add PR Link on Paste
 // @namespace    https://github.com/stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
-// @version      0.3.2
+// @version      0.3.3
 // @description  Attach a Link when pasting a PR URL
 // @author       stebaker92
 // @match        https://*.atlassian.net/browse/*
@@ -38,9 +38,9 @@
 
         const repoName = decodeURI(text.includes("dev.azure.com") ? text.split("/")[6] : text.split("/")[5]); // This only handles Azure & VisualStudio.com links currently
 
-        document.querySelector(`[data-testid="issue.views.issue-base.foundation.quick-add.link-button.ui.link-dropdown-button"]`).click();
+        document.querySelector(`[data-testid="issue-view-foundation.quick-add.quick-add-items-compact.add-button-dropdown--trigger"]`).click();
         await wait(150)
-        document.querySelector(`[data-testid="issue.issue-view.views.issue-base.foundation.quick-add.quick-add-item.link-web"]`).click(); 
+        document.querySelector(`[data-testid="issue.issue-view.views.issue-base.foundation.quick-add.quick-add-item.link-web"]`).click();
         await wait(150)
 
         sendKeys(`[data-testid="issue.views.issue-base.content.web-links.create-link.inline-fields.url"]`, text);
