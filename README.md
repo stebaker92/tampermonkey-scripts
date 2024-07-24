@@ -36,7 +36,7 @@ Adds 'Review Requests' link to GitHubs navbar
 Says a thing when you can merge
 
 ## JIRA - Add PR Link on Paste
-[![Install](https://img.shields.io/badge/v0.3.2-install-success)](jira-add-pr-link-on-paste.user.js?raw=1)
+[![Install](https://img.shields.io/badge/v0.3.3-install-success)](jira-add-pr-link-on-paste.user.js?raw=1)
 Attach a Link when pasting a PR URL
 
 ## Spotify - Hide Podcast Recommendations
