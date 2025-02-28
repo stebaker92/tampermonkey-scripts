@@ -2,7 +2,7 @@
 // @name         Azure DevOps - Hide Archived Resources
 // @namespace    https://github.com/stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
-// @version      0.1.1
+// @version      0.2
 // @description  Mute resources repositories with 'archived' in the name
 // @author       stebaker92
 // @match        https://dev.azure.com/**
@@ -10,6 +10,8 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=visualstudio.com
 // @require      https://cdn.jsdelivr.net/gh/CoeJoder/waitForKeyElements.js@v1.2/waitForKeyElements.js
 // ==/UserScript==
+
+const ARCHIVE_TERMS = ["!archive", "(archive)", "(archived)"];
 
 (function() {
     'use strict';
@@ -25,12 +27,19 @@ function hideArchivedRepos() {
 
     function hideEl(el) {
         console.log("found el", el.innerText)
-        if (el.innerText?.toLowerCase().includes("archived")){
+        if (ARCHIVE_TERMS.some(term => el.innerText?.toLowerCase().includes(term.toLowerCase()))) {
             el.style.opacity=".4";
         }
     }
 }
 
 function hideArchivedProjects() {
-    // TODO
+    waitForKeyElements(`.project-row.project-info`, (e) => hideEl(e), false, 100);
+
+    function hideEl(el) {
+        console.log("found el", el.innerText)
+        if (ARCHIVE_TERMS.some(term => el.innerText?.toLowerCase().includes(term.toLowerCase()))) {
+            el.style.opacity=".4";
+        }
+    }
 }
