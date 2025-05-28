@@ -11,6 +11,10 @@ Issues & Pull requests are welcome!
 [![Install](https://img.shields.io/badge/v0.5.2-install-success)](azure-add-jira-link.user.js?raw=1)
 Adds a link to JIRA tickets on Azure PRs
 
+## Azure - Web App Helper
+[![Install](https://img.shields.io/badge/v0.5-install-success)](azure-app-helper.user.js?raw=1)
+try to take over the world!
+
 ## Azure DevOps - Hide Archived Resources
 [![Install](https://img.shields.io/badge/v0.2-install-success)](azure-hide-archived-resources.user.js?raw=1)
 Mute resources repositories with 'archived' in the name
