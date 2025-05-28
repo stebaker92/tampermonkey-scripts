@@ -2,8 +2,8 @@
 // @name         Azure DevOps - Add Jira Link
 // @namespace    https://github.com/stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
-// @version      0.5.2
-// @description  Adds a link to JIRA tickets on Azure PRs
+// @version      0.5.3
+// @description  Adds a link to JIRA tickets on PRs
 // @author       stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
 // @match        https://*.visualstudio.com/**
@@ -23,7 +23,7 @@
     if (!JIRA_URL) return;
 
     // DevOps uses client side routing so we need to wait until we're on a PR page to inject this button
-    waitForKeyElements(`.pr-header-branches .bolt-link`, () => addBtn());
+    waitForKeyElements(`.pr-header-branches > .bolt-link:last-of-type`, () => addBtn());
     waitForKeyElements(`.repos-pr-description-card`, () => injectLinkCard(), false);
 
     function addBtn() {
@@ -52,17 +52,21 @@
     }
 
     function getTicket(){
-        const branch = document.querySelector(".pr-header-branches .bolt-link").innerText;
+        const branch = document.querySelector(".pr-header-branches > .bolt-link:last-of-type").innerText;
 
         var regexParsed = extractJiraTicketNumber(branch);
         if (regexParsed) return regexParsed;
 
         console.warn("Unable to parse ticket via regex");
+
+        //var ticketParsed = branch.split("-").slice(0, 2).join("-")
+        //ticketParsed = branch.split("-").slice(0, 2).join("-").replace("feature/", "").replace("feat/", "").replace("refactor/", "")
+       // return ticketParsed;
     }
 
     function extractJiraTicketNumber(branchName) {
         // Define a regular expression pattern to match Jira ticket numbers with specified ranges.
-        const pattern = /([A-Z]{3,}-\d{1,4})/i;
+        const pattern = /([A-Z]{3,}-\d{1,4})/gi;
 
         // Use the regular expression's exec method to find matches in the branch name.
         const match = pattern.exec(branchName);
