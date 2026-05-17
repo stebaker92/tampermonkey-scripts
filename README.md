@@ -23,10 +23,6 @@ Mute resources repositories with 'archived' in the name
 [![Install](https://img.shields.io/badge/v0.1.1-install-success)](github-add-ribbon.user.js?raw=1)
 Add repo links onto github hosted apps
 
-## GitHub - Add link to gitpod
-[![Install](https://img.shields.io/badge/v0.1-install-success)](github-gitpod-link.user.js?raw=1)
-Adds a link to GitPod on all repos
-
 ## GitHub - Hide test files in PRs
 [![Install](https://img.shields.io/badge/v0.1.4-install-success)](github-pr-hide-files.user.js?raw=1)
 Auto collapse all test related files in PRs
