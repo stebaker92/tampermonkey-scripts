@@ -21,10 +21,6 @@ function getRepo() {
 }
 
 function getBranchesUrl() {
-    return dataProviders?.data['ms.vss-code-web.branches-hub'];
-}
-
-function getBranchesUrl() {
     return dataProviders?.data["ms.vss-code-web.versioncontrol-viewmodel-data-provider"]?.gitRepository.url + "/stats/branches"
 }
 
@@ -33,7 +29,7 @@ async function fetchBranches(repoId) {
     return await response.json();
 }
 
-azure = {
+window.azure = {
     getBaseApiUrl,
     getProject,
     getRepo,
