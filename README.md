@@ -24,7 +24,7 @@ Mute resources repositories with 'archived' in the name
 Add repo links onto github hosted apps
 
 ## GitHub - Hide test files in PRs
-[![Install](https://img.shields.io/badge/v0.1.4-install-success)](github-pr-hide-files.user.js?raw=1)
+[![Install](https://img.shields.io/badge/v0.1.5-install-success)](github-pr-hide-files.user.js?raw=1)
 Auto collapse all test related files in PRs
 
 ## GitHub - Review Requests header link
