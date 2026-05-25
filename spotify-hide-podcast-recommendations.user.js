@@ -2,7 +2,7 @@
 // @name         Spotify - Hide Podcast Recommendations
 // @namespace    https://github.com/stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
-// @version      0.3.2
+// @version      0.4
 // @description  Hide podcast recommendations from homepage
 // @author       stebaker92
 // @match        https://open.spotify.com/*
@@ -16,11 +16,13 @@
         console.log("creating MutationObserver");
 
         const observer = new MutationObserver(() => {
-            const elements = document.querySelectorAll(`a[href*="/episode/"], a[href*="/show/"], a[href*="/podcasts/"]`);
+            const elements = document.querySelectorAll(`a[href*="/episode/"], a[href*="/show/"], a[href*="/podcasts/"], a[href*="/audiobook/"]`);
 
             for (const element of elements) {
                 let closestParentSection = element.closest(`section[data-testid="component-shelf"]`);
-                closestParentSection.style.display = "none";
+                
+                if (closestParentSection) 
+                    closestParentSection.style.display = "none";
             }
         });
 
