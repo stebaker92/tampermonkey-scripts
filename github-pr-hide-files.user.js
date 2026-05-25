@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub - Hide test files in PRs
 // @namespace    https://github.com/stebaker92/
-// @version      0.1.4
+// @version      0.1.5
 // @description  Auto collapse all test related files in PRs
 // @author       stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
@@ -17,6 +17,8 @@ const testPatterns = [
     'test/',
     'test-utils/',
     'fixture',
+    '.snap',
+    '__mocks__/',
 ];
 
 (function () {
@@ -34,23 +36,18 @@ function toggleTestFiles() {
     console.log('got files', files)
 
     files.forEach(file => {
-        const path = file.querySelector('.file-header')?.attributes['data-path']?.textContent;
+        const path = file.querySelector('.file-header')?.attributes['data-path']?.value;
 
         if (!path) return;
 
         console.log('checking file', path)
 
-        let isTestFile = false
-        testPatterns.forEach(pattern => {
-            if (path.includes(pattern)) {
-                isTestFile = true
-            }
-        })
+        const isTestFile = testPatterns.some(pattern => path.includes(pattern));
 
         console.log(`file is ${isTestFile}`)
 
         if (isTestFile) {
-            const button = file.querySelector('.file-info button')
+            const button = file.querySelector('.file-info button');
 
             if (button.attributes['aria-expanded'].textContent === 'true') {
                 button.click();
