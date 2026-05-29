@@ -8,7 +8,7 @@ Issues & Pull requests are welcome!
 
 
 ## Azure DevOps - Add Jira Link
-[![Install](https://img.shields.io/badge/v0.5.3-install-success)](azure-add-jira-link.user.js?raw=1)
+[![Install](https://img.shields.io/badge/v0.5.4-install-success)](azure-add-jira-link.user.js?raw=1)
 Adds a link to JIRA tickets on PRs
 
 ## Azure - Web App Helper
