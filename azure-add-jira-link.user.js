@@ -2,7 +2,7 @@
 // @name         Azure DevOps - Add Jira Link
 // @namespace    https://github.com/stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
-// @version      0.5.3
+// @version      0.5.4
 // @description  Adds a link to JIRA tickets on PRs
 // @author       stebaker92
 // @homepage     https://github.com/stebaker92/tampermonkey-scripts/
@@ -23,7 +23,7 @@
     if (!JIRA_URL) return;
 
     // DevOps uses client side routing so we need to wait until we're on a PR page to inject this button
-    waitForKeyElements(`.pr-header-branches > .bolt-link:last-of-type`, () => addBtn());
+    waitForKeyElements(`.pr-header-branches > .bolt-link:first-of-type`, () => addBtn());
     waitForKeyElements(`.repos-pr-description-card`, () => injectLinkCard(), false);
 
     function addBtn() {
@@ -52,7 +52,7 @@
     }
 
     function getTicket(){
-        const branch = document.querySelector(".pr-header-branches > .bolt-link:last-of-type").innerText;
+        const branch = document.querySelector(".pr-header-branches > .bolt-link:first-of-type").innerText;
 
         var regexParsed = extractJiraTicketNumber(branch);
         if (regexParsed) return regexParsed;
