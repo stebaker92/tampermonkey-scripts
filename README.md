@@ -47,10 +47,6 @@ Hide podcast recommendations from homepage
 [![Install](https://img.shields.io/badge/v1-install-success)](trello-card-numbers.user.js?raw=1)
 Show unique identifiers on Trello cards
 
-## Twitch - reward redeemer
-[![Install](https://img.shields.io/badge/v0.2-install-success)](twitch-redeem-auto-collector.user.js?raw=1)
-Auto redeems channel rewards in Twitch
-
 ## Ultimate Guitar - Link To Spotify
 [![Install](https://img.shields.io/badge/v0.1.2-install-success)](ultimateguitar-spotify-link.user.js?raw=1)
 Adds a link to Spotify
